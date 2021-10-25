@@ -1,5 +1,5 @@
 <?php
-
+// This class has the connections 
 class Dbh {
 
     private $host = 'localhost';
@@ -23,6 +23,11 @@ class Dbh {
     }
 
     public function mysqli__connect() {
+
+        define('DB_HOST', '');
+        define('DB_USER', '');
+        define('DB_PWD', '');
+        define('DB_NAME', '');
 
         $db['db_host'] = $this->host;
         $db['db_user'] = $this->user;
@@ -48,13 +53,5 @@ class Dbh {
         return $mypdo;
     }
 };
-
-
-
-
-
-
-
-
 
 //$connection = mysqli_connect($obj->host, $obj->user, $obj->pwd, $obj->dbName);

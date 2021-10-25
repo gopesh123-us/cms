@@ -1,6 +1,6 @@
 <body>
     <?php
-    include_once './includes/header.php';
+    include_once './includes/header.include.php';
     include_once './classes/mypdo.class.php';
     include_once './classes/dbh.class.php';
     include_once './classes/categories.class.php';
@@ -8,7 +8,7 @@
     ?>
     <!-- Navigation -->
     <?php
-    include './includes/navigation.php'
+    include './includes/navigation.include.php'
     ?>
     <!-- Page Content -->
     <!-- container -->
@@ -17,25 +17,25 @@
         <div class="row">
             <!-- Blog Entries Column -->
             <?php
-            include './includes/blogposts.php';
+            include './includes/blogpost.include.php';
             ?>
             <!-- Blog Sidebar Widgets Column -->
             <?php
-            include './includes/sidebar.php';
+            include './includes/sidebar.include.php';
             ?>
         </div>
         <!-- /.row -->
         <hr>
         <!-- Footer -->
         <?php
-        include './includes/footer.php';
+        include './includes/footer.include.php';
         ?>
     </div>
     <!-- /.container -->
 
     <!-- scripts -->
     <?php
-    include './includes/scripts.php';
+    include './includes/scripts.include.php';
     ?>
     <!-- /.scripts -->
 </body>

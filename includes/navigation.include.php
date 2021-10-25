@@ -23,7 +23,6 @@
                     echo "<li><a href='#'>{$category['category_title']}</a></li>";
                 }
                 ?>
-
             </ul>
         </div>
         <!-- /.navbar-collapse -->

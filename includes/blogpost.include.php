@@ -1,10 +1,17 @@
+        <!-- 1. grabs data 
+        2. invokes view class
+        3. returns back to home page -->
         <div class="col-md-8">
-
             <h1 class="page-header">
                 Page Heading
                 <small>Secondary Text</small>
             </h1>
+            <?php
+            //1. invoke view
+            //2. get post data
+            //3. display data
 
+            ?>
             <!-- First Blog Post -->
             <h2>
                 <a href="#">Blog Post Title</a>
@@ -22,6 +29,6 @@
             <hr>
 
             <?php
-            include 'includes/pager.php';
+            include 'includes/pager.include.php';
             ?>
         </div>
