@@ -5,10 +5,10 @@ class MyPDO extends PDO {
         if (!$settings = parse_ini_file($file, true)) {
             throw new exception('unable to open ' . $file . '.');
         }
-        $dsn = $settings['database']['driver'] .
-            ':host=' . $settings['database']['host'] .
-            ((!empty($settings['database']['port'])) ? (';port=' . $settings['database']['port']) : '') .
-            ';dbname=' . $settings['database']['schema'];
-        parent::__construct($dsn, $settings['database']['username'], $settings['database']['password']);
+        $dsn = $settings['local-database']['driver'] .
+            ':host=' . $settings['local-database']['host'] .
+            ((!empty($settings['local-database']['port'])) ? (';port=' . $settings['local-database']['port']) : '') .
+            ';dbname=' . $settings['local-database']['schema'];
+        parent::__construct($dsn, $settings['local-database']['username'], $settings['local-database']['password']);
     }
 }
