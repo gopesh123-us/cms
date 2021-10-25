@@ -1,34 +1,39 @@
-        <!-- 1. grabs data 
-        2. invokes view class
-        3. returns back to home page -->
-        <div class="col-md-8">
-            <h1 class="page-header">
-                Page Heading
-                <small>Secondary Text</small>
-            </h1>
-            <?php
-            //1. invoke view
-            //2. get post data
-            //3. display data
+<div class="col-md-8">
+    <h1 class="page-header">
+        Page Heading
+        <small>Secondary Text</small>
+    </h1>
+    <?php
+    // 1. grabs data 
+    // 2. invokes view class
+    $blogpostView = new BlogPostView();
+    $blogposts = $blogpostView->getblogpostDataAll();
+    // 3. display data
+    foreach ($blogposts as $blogpost) {
+        # code...
+    }
+    // 4. returns back to home page
+    ?>
+    <!-- First Blog Post -->
+    <h2>
+        <?php
+        echo "<a href='#'>{$blogpost['post_title']}</a>";
+        ?>
+    </h2>
+    <p class="lead">
+        by <?php echo "<a href='index.php'>{$blogpost['post_author']}</a>" ?>
+    </p>
+    <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo "August 28, 2013" ?> at <?php echo "10:00 PM" ?></p>
 
-            ?>
-            <!-- First Blog Post -->
-            <h2>
-                <a href="#">Blog Post Title</a>
-            </h2>
-            <p class="lead">
-                by <a href="index.php">Start Bootstrap</a>
-            </p>
-            <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
-            <hr>
-            <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum. lorem150</p>
-            <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+    <hr>
+    <img class="img-responsive" src="images/<?php echo $blogpost['post_image'] ?>/900x400" alt="">
+    <hr>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum. lorem150</p>
+    <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
-            <hr>
+    <hr>
 
-            <?php
-            include 'includes/pager.include.php';
-            ?>
-        </div>
+    <?php
+    include 'includes/pager.include.php';
+    ?>
+</div>

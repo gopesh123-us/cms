@@ -5,6 +5,10 @@
     include_once './classes/dbh.class.php';
     include_once './classes/categories.class.php';
     include_once './classes/categoriesView.class.php';
+
+    include_once 'classes/blogpost.class.php';
+    include_once 'classes/blogpostView.class.php';
+
     ?>
     <!-- Navigation -->
     <?php
@@ -17,7 +21,7 @@
         <div class="row">
             <!-- Blog Entries Column -->
             <?php
-            include './includes/blogpost.include.php';
+            include_once './includes/blogpost.include.php';
             ?>
             <!-- Blog Sidebar Widgets Column -->
             <?php
